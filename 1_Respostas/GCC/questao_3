@@ -1,0 +1,29 @@
+
+Questão 3
+
+a)
+
+quando digita mais de 1 nome aparece so o primeiro nome, pois o espaço o compilador considera 0, sendo o numero que é o fim do vetor char;
+
+b)
+
+Aparece apenas "eu , pois, entra no mesmo caso da questão a.
+
+c)
+
+o programa entendi que o argumento de entrada é o Eu sem precisar digitar o usuario.
+
+d)
+
+Apenas passa direto o primeiro argumento que é o EU.
+
+e)
+
+Apresenta apenas o argumento Eu sem as aspas.
+
+f)
+
+Criou-se um arquivo com o conteudo ola mundo cruel e depois quando anexou o arquivo no programa apenas apareceu ola, ou seja, caindo na mesma ideia do /0 o espaço.
+
+
+
