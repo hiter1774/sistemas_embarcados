@@ -1,0 +1,51 @@
+Nome: Hiterson de OLiveira
+matricula:130114227
+
+1. O que são sistemas embarcados?
+ São sistemas microprocessados no qual o computador é completamente encapsulado ou dedicado ao dispositivo ou sistema que ele controla. Um sistema embarcado realiza um conjunto de tarefas predefinidas, geralmente com requisitos específicos.
+
+2. O que são sistemas microprocesssados?
+
+ São sistemas que utilizam microprocessadores,que é um dispositivo multifuncional programável que aceita dados digitais como entrada, processa de acordo com as instruções armazenadas em sua memória, e fornece resultados como saída. Microprocessadores operam com números e símbolos representados no sistema binário. 
+
+3. Apresente aplicações de sistemas embarcados:
+	(a) Para a indústria automotiva:
+         Redes de comunicação embarcada como CAN e LIN;
+         Sistemas de GPS e navegação;
+         Controle de motor e injeção eletrônica;
+         Alarmes;
+         Controle de transmissão e carroceria;
+         Sistemas em tempo real como Freios ABS e Air Bag;
+
+	(b) Para eletrodomésticos:
+         Controle de temperatura de uma geladeira; 
+         Interface e controle de um forno micro-ondas; 
+         Escovas elétricas;
+         Interface e controle de uma máquina de lavar roupas;
+         
+          
+	(c) Para automação industrial:
+          Controlador Single Loop/Mult Loop;
+          CLP/PLC (Controlador Lógico Programável);
+          Soft PLC;
+          PAC (Controlador Programável de Automação);
+          CNC (Comando Numérico Computadorizado);
+          SDCD (Sistema de Controle Digital Distribuído);
+          Instrumentos Inteligentes;
+          PC Industrial;
+          IHM (Interface Homem-Máquina);
+          Computador de Vazão;
+
+4. Cite arquiteturas possíveis e as diferenças entre elas.
+        Microcontroladores: É um pequeno computador num único circuito integrado o qual contém um núcleo de processador, memória e periféricos programáveis de entrada e saída. Não apresenta um sistema operacional para programação, sendo que os programas devem ser desenvolvidos e inseridos diretamente no microcontrolador.
+	Procesadores de Propósito Geral (GPPs): São microprocessadores que realizam operações matemáticas e realizam tarefas de propósito geral. Esses são os processadores encontrados em computadores pessoais (PCs), tais como Intel Core i7, Ryzen 7, etc. Eles realizam tarefas de forma extremamente rápidas e geralmente são mais caros quando comparados com microcontroladores e DSPs, pois devem ser versáteis para cumprirem tarefas de propósito geral.
+	DSPs (Digital Signal Processors): São microprocessadores especializados, os quais apresentam arquitetura otimizada para realização de tarefas relacionadas ao processamento digital de sinais. Os objetivos dos DSPs são medir, filtrar e comprimir sinais de forma digital. Eles também podem apresentar algoritmos utilizados em processamento digital de sinais. São extremamente rápidos, porém, especializados para o processamento de sinais digitais, ou seja, não podem ser usados como GPPs e, por isso, geralmente são mais baratos do que estes.
+	FPGAs (Field Programmable Gate Arrays): As FPGAs são circuitos integrados programados com linguagem de descrição de hardware (HDL) e são muito utilizadas para simulações de circuitos elétricos. Com FPGAs, é possível programar portas lógicas, blocos lógicos, flip-flops, etc.
+	ASICs (Application Specific Integrated Circuits): São circuitos integrados especializados para realizar uma funcionalidade bem específica. Por exemplo, existem ASICs para gravação de áudio ou para minerar bitcoins de forma mais eficiente. 
+	SoCs (System on Chip): São uma combinação de microprocessadores com microcontroladores com periféricos mais avançados, tais como unidade de processamento gráfico (GPU) e módulo Wi-Fi. Também é possível inserir um sistema operacional para auxiliar na programação. Um exemplo é justamente a Raspberry Pi.
+	MPSoCs (Multiple Processor System on Chip): É simplesmente um SoC com múltiplos microprocessadores. Dessa forma, a capacidade de processamento do sistema é aumentada drasticamente, assim como o preço do produto.
+
+
+5. Por que usamos o Raspberry Pi na disciplina, ao invés de outro system-on-chip?
+
+ Porque  a Raspberry Pi é um computador de baixo custo e que tem o tamanho de um cartão de crédito.Também por poder embarcar um sistema operacional Linux, e, assim, é uma oportunidade para estudar e aprender mais sobre programação e também sobre o Linux. Também é uma oportunidade de ter contato com um SoC utilizado pela indústria e aprender mais sobre suas capacidades e limitações, pois há várias ferramentas para projetos de engenharia e uma parte do trabalho de um engenheiro é conhecer essas ferramentes e saber escolher a que melhor cumpre os requisitos do projeto a ser realizado. 
