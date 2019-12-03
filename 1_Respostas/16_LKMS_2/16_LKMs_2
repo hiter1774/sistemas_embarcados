@@ -1,0 +1,65 @@
+
+
+    1 O que é memória virtual?
+Memória virtual é uma técnica que usa a memória secundária como uma cache para armazenamento secundário. Houve duas motivações principais: permitir o compartilhamento seguro e eficiente da memória entre vários programas e remover os transtornos de programação de uma quantidade pequena e limitada na memória principal. 
+
+    2 Qual é a diferença entre o user space e o kernel space?
+A RAM é dividida em duas regiões distintas - o espaço do usuário e o espaço kernal.
+
+Espaço do Usuário - É um conjunto de locais onde os processos normais do usuário são executados. Esses processos não podem acessar o espaço kernal diretamente. Parte do espaço kernal pode ser acessado por meio de chamadas do sistema. Essas chamadas do sistema agem como interrupções de software no espaço kernal.
+
+Espaço Kernal - o kernal é executado na parte dedicada da memória. A função do espaço kernal é gerenciar aplicativos / processos em execução no espaço do usuário. Pode acessar toda a memória. Se um processo executar uma chamada do sistema, uma interrupção do software é enviada ao kernal, que então envia um manipulador de interrupção apropriado.
+
+
+    3 Qual é a diferença de acesso à memória virtual entre o user space e o kernel space?
+
+Modo Kernel
+
+         No modo Kernel, o código em execução tem acesso completo e irrestrito ao hardware subjacente. Pode executar qualquer instrução da CPU e referenciar qualquer endereço de memória. O modo do kernel geralmente é reservado para as funções mais confiáveis e de nível mais baixo do sistema operacional. Falhas no modo kernel são catastróficas; eles vão parar o PC inteiro.
+
+         Modo de usuário
+
+         No modo Usuário, o código em execução não tem capacidade de acessar diretamente o hardware ou a memória de referência. O código em execução no modo de usuário deve delegar nas APIs do sistema para acessar o hardware ou a memória. Devido à proteção oferecida por esse tipo de isolamento, as falhas no modo de usuário são sempre recuperáveis. A maior parte do código executado no seu computador será executado no modo de usuário.
+
+    4 Em termos práticos, por que é feita esta distinção entre user space e kernel space?
+
+resposta simplificada realmente é que o kernel roda no espaço do kernel, e os programas normais são executados no espaço do usuário. O espaço do usuário é basicamente uma forma de sand-boxing - ele restringe os programas do usuário para que eles não possam mexer com a memória (e outros recursos) de propriedade de outros programas ou do kernel do sistema operacional. Isso limita (mas geralmente não elimina inteiramente) sua capacidade de fazer coisas ruins, como travar a máquina.
+
+O kernel é o núcleo do sistema operacional. Normalmente tem acesso total a toda a memória e hardware da máquina (e tudo o mais na máquina). Para manter a máquina o mais estável possível, você normalmente deseja que apenas o código mais confiável e bem testado seja executado no modo kernel/espaço do kernel.
+
+
+    5 Qual é a diferença entre Linux e GNU/Linux?
+Para os de fora olhando para o mundo do software de código aberto e sistemas operacionais de código aberto , o GNU e Linux são freqüentemente confundidos como sendo a mesma coisa. Enquanto o Linux e GNU compartilhar objetivos comuns no avanço da filosofia e da utilização de software de código aberto , eles são muito diferentes entidades que servem a propósitos diferentes. Componentes do sistema operacional
+
+Sistemas operacionais não são apenas uma única peça de hardware. O kernel cria uma interface para unificar as operações de componentes de hardware e dá ao usuário uma interface para operar o computador físico, ambientes de desktop e gerenciadores de janelas dar aos usuários uma interface gráfica para usar o kernel e programas individuais permitem que o usuário realmente usar o computador para realizar diferentes tarefas. Enquanto os sistemas operacionais proprietários parecem combinar todos estes componentes em uma única unidade , os sistemas GNU /Linux documentar cada unidade dentro de um sistema operacional. 
+
+    6 O que é um Linux Kernel Module (LKM)? Quais são suas vantagens?
+Em computação, um módulo carregável do núcleo, do inglês loadable kernel module (ou LKM), é um arquivo objeto que contém código para estender o núcleo em execução, ou o chamado núcleo base, de um sistema operacional. Os LKMs são normalmente usados para adicionar suporte para novos hardwares (como controladores de dispositivos) e/ou sistemas de arquivos, ou para adicionar chamadas de sistema. Quando a funcionalidade fornecida por um LKM não for mais necessária, ela pode ser descarregada com o objetivo de liberar memória e outros recursos
+
+Sem módulos carregáveis do núcleo, um sistema operacional teria de incluir todos as possíveis funcionalidades antecipadamente e já compiladas diretamente no núcleo base. Muitas dessas funcionalidades iria residir na memória sem serem utilizados, desperdiçando memória, e exigiria que os usuários reconstruíssem e reiniciassem o núcleo base toda vez que necessitassem de novas funcionalidades. A maioria dos sistemas operacionais que suportam os módulos carregáveis do núcleo incluirão módulos para suportar as funcionalidades mais desejadas. 
+
+    7 O que são device drivers?
+
+No contexto da informática, a função de um driver de dispositivo ou controlador de dispositivo é aceitar requerimentos abstratos do software independente do dispositivo acima dele e cuidar para que a solicitação seja executada, permitindo que o software interaja com o dispositivo.
+
+Um driver não é um processo ou tarefa (programa) gerido independentemente pelo sistema, mas sim um conjunto de tabelas contendo informações sobre cada periférico, bem como os fluxos de informação circulante entre o computador e o periférico. Pode ser visto em alguns casos como parte do processo que está em execução. 
+
+   8 Cite uma situação prática em que vale a pena desenvolver um device driver.
+
+Drivers de dispositivo usam os diretórios "/dev" para prover o acesso ao hardware e "/sys" para exportar informações do hardware. Cada arquivo dentro de "/dev" provê acesso à determinado hardware. 
+
+Para comunicar um dispositivo eletrônico.
+
+   9 O que é a General Public License (GPL)? Quais são suas características?
+
+ GNU GPL ou simplesmente GPL, é a designação da licença de software para software idealizada por Richard Matthew Stallman em 1989, no âmbito do projeto GNU da Free Software Foundation (FSF). Richard Stallman originalmente criou a licença para o Projeto GNU de acordo com as definições de software livre da Free Software Foundation.
+
+Sendo uma licença copyleft, trabalhos derivados de um produto originalmente licenciado pela GPL só podem ser distribuídos se utilizarem a mesma licença. Isso é diferente das licenças permissivas como a licença BSD e a licença MIT, que possuem exigências mais simples. 
+
+Em termos gerais, a GPL baseia-se em 4 liberdades:
+
+    A liberdade de executar o programa, para qualquer propósito (liberdade nº 0)
+    A liberdade de estudar como o programa funciona e adaptá-lo às suas necessidades (liberdade nº 1). O acesso ao código-fonte é um pré-requisito para esta liberdade.
+    A liberdade de redistribuir cópias de modo que você possa ajudar ao seu próximo (liberdade nº 2).
+    A liberdade de aperfeiçoar o programa e liberar os seus aperfeiçoamentos, de modo que toda a comunidade beneficie deles (liberdade nº 3). O acesso ao código-fonte é um pré-requisito para esta liberdade.
+
